@@ -6,33 +6,24 @@
         {
             string name;
             string symbol;
-            int lengthName;
-            int lengthString;
-            int positionCursorX = 1;
-            int positionCursorY = 1;
-            int quantityStrings = 3;
-            int quantityAdditionalCharacters = 2;
+            string firstLine = "";
+            string secondLine;
 
             name = Console.ReadLine();
             symbol = Console.ReadLine();
-            lengthName = name.Length;
-            lengthString = lengthName + quantityAdditionalCharacters;
+
+            secondLine = symbol + name + symbol;
+
             Console.Clear();
 
-            for (int i = 0; i < quantityStrings; i++)
+            for (int i = 0; i < secondLine.Length; i++)
             {
-                for (int y = 0; y < lengthString; y++)
-                {
-                    Console.Write(symbol);
-                }
-
-                Console.Write("\n");
+                firstLine += symbol;
             }
 
-            Console.SetCursorPosition(positionCursorX, positionCursorY);
-            Console.Write(name);
-            Console.Write("\n");
-            Console.Write("\n");
+            Console.WriteLine(firstLine);
+            Console.WriteLine(secondLine);
+            Console.WriteLine(firstLine);
         }
     }
 }
